@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Premier Academic Destination. Connect with students from around the world and unlock your full academic potential with our comprehensive resources, tools, and tips. Our social platform allows you to collaborate, ask questions, and grow your professional network">
+    <meta name="keywords" content="academic resources, study tips, student community, professional network, collaboration platform, study tools, academic success, student support, study hub">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <title>StudBud - Your One-Stop Study Hub</title>
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% block content %}
+
+
+    {% endblock %}
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
